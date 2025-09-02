@@ -412,7 +412,7 @@ class RseeController:
     def pmd_8te_set_strobe_mode(self, com_handle, net_handle, is_strobe):
         """Sets the controller to constant light or strobe mode. 1=Constant, 2=Strobe."""
         mode = 2 if is_strobe else 1
-        return self.dll.RseeController_PM_D_8TE_ChangeMode_New(com_handle, net_handle, mode)
+        return self.dll.RseeController_PM_D_8TE_ChangeMode(com_handle, net_handle, mode)
 
     # --- AHC Series ---
     def ahc_set_channel(self, com_handle, channel, value):
